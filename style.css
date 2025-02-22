@@ -1,0 +1,36 @@
+body {
+  margin: 0px;
+  background-image: url(https://i.ibb.co/zTspxyf2/istockphoto-508427547-612x612.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header {
+  background: rgb(159, 201, 245);
+  background: linear-gradient(
+    135deg,
+    rgba(159, 201, 245, 1) 0%,
+    rgba(111, 181, 233, 1) 30%,
+    rgba(0, 109, 195, 1) 90%
+  );
+  padding: 15px;
+}
+#search-bar {
+  border: 8px solid white;
+  padding: 5px;
+  border-radius: 2px;
+  width: 400px;
+  opacity: 75%;
+}
+#search-button {
+  border: 10px solid #0185d0;
+  background-color: #0185d0;
+  margin: 10px;
+  padding: 4px 12px;
+  border-radius: 5px;
+  color: white;
+}
+#search-button:hover {
+  border: 10px solid #0268c0;
+  background-color: #0268c0;
+  transition: all 120ms ease-in-out;
+}
