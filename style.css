@@ -35,5 +35,19 @@ header {
   transition: all 120ms ease-in-out;
 }
 .city-container {
+  text-align: center;
   color: white;
+}
+#current-city {
+  font-family: "Raleway", serif;
+  font-weight: 300;
+  font-size: 48px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+#current-temperature {
+  font-weight: 400;
+  font-size: 40px;
+  margin-top: 20px;
+  font-family: "Poppins", serif;
 }
