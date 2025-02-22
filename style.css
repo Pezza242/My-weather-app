@@ -34,3 +34,6 @@ header {
   background-color: #0268c0;
   transition: all 120ms ease-in-out;
 }
+.city-container {
+  color: white;
+}
