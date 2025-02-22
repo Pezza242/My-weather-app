@@ -12,7 +12,7 @@ header {
     rgba(111, 181, 233, 1) 30%,
     rgba(0, 109, 195, 1) 90%
   );
-  padding: 15px;
+  padding: 10px;
 }
 #search-bar {
   border: 8px solid white;
