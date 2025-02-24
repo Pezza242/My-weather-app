@@ -3,6 +3,7 @@ body {
   background-image: url(https://i.ibb.co/zTspxyf2/istockphoto-508427547-612x612.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 header {
   background: rgb(159, 201, 245);
@@ -13,6 +14,7 @@ header {
     rgba(0, 109, 195, 1) 90%
   );
   padding: 10px;
+  background-attachment: fixed;
 }
 #search-bar {
   border: 8px solid white;
@@ -41,13 +43,13 @@ header {
 #current-city {
   font-family: "Raleway", serif;
   font-weight: 300;
-  font-size: 48px;
+  font-size: 45px;
   margin-top: 50px;
   margin-bottom: 10px;
 }
 #current-temperature {
-  font-weight: 400;
-  font-size: 40px;
+  font-weight: 300;
+  font-size: 42px;
   margin-top: 20px;
   font-family: "Poppins", serif;
 }
