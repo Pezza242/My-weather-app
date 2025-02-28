@@ -1,39 +1,40 @@
 body {
   margin: 0px;
-  background-image: url(https://i.ibb.co/zTspxyf2/istockphoto-508427547-612x612.jpg);
+  background-image: url(https://i.ibb.co/HpX6rsYn/pexels-blue-sky.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
 header {
-  background: rgb(159, 201, 245);
+  background: rgb(216, 236, 251);
   background: linear-gradient(
     135deg,
-    rgba(159, 201, 245, 1) 0%,
-    rgba(111, 181, 233, 1) 30%,
-    rgba(0, 109, 195, 1) 90%
+    rgba(216, 236, 251, 1) 0%,
+    rgba(122, 183, 241, 1) 50%,
+    rgba(22, 155, 229, 1) 100%
   );
   padding: 10px;
   background-attachment: fixed;
+  margin-bottom: 25px;
 }
 #search-bar {
   border: 8px solid white;
   padding: 5px;
-  border-radius: 2px;
+  border-radius: 4px;
   width: 400px;
   opacity: 75%;
 }
 #search-button {
-  border: 10px solid #0185d0;
-  background-color: #0185d0;
+  border: 10px solid #65b4ef;
+  background-color: #65b4ef;
   margin: 10px;
   padding: 4px 12px;
   border-radius: 5px;
   color: white;
 }
 #search-button:hover {
-  border: 10px solid #0268c0;
-  background-color: #0268c0;
+  border: 10px solid #1199e3;
+  background-color: #1199e3;
   transition: all 120ms ease-in-out;
 }
 .city-container {
@@ -42,14 +43,26 @@ header {
 }
 #current-city {
   font-family: "Raleway", serif;
-  font-weight: 300;
+  font-weight: 200;
   font-size: 45px;
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 #current-temperature {
   font-weight: 300;
-  font-size: 42px;
-  margin-top: 20px;
+  font-size: 54px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-family: "Poppins", serif;
+}
+span {
+  font-size: 60px;
+}
+#weather-box {
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  max-width: 550px;
+  padding: 100px 50px;
+  font-family: "Raleway", serif;
 }
