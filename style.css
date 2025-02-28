@@ -66,3 +66,7 @@ span {
   padding: 100px 50px;
   font-family: "Raleway", serif;
 }
+footer {
+  font-size: 12px;
+  text-align: center;
+}
