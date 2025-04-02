@@ -3,6 +3,10 @@ function updateWeather(response) {
   let currentTemperature = document.querySelector("#current-temperature");
   //console.log(response.data);
   currentTemperature.innerHTML = Math.round(temperatureData);
+
+  let currentCity = document.querySelector("#current-city");
+  let cityName = response.data.city;
+  currentCity.innerHTML = cityName;
 }
 
 function searchCity(city) {
@@ -14,8 +18,6 @@ function searchCity(city) {
 function citySearchBar(event) {
   event.preventDefault();
   let searchBar = document.querySelector("#search-bar");
-  let currentCity = document.querySelector("#current-city");
-  currentCity.innerHTML = searchBar.value;
   searchCity(searchBar.value);
 }
 
