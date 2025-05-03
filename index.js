@@ -8,11 +8,76 @@ function updateWeather(response) {
   let cityName = response.data.city;
   currentCity.innerHTML = cityName;
 
+  let weatherIcon = document.querySelector("#weather-icon");
+  weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}"/>`;
+
+  let description = document.querySelector("#weather-description");
+  let weatherDescription = response.data.condition.description;
+  description.innerHTML = weatherDescription;
+
   let feelsLike = document.querySelector("#feels-like");
   let feelsLikeTemperature = response.data.temperature.feels_like;
   feelsLike.innerHTML = `Feels like: ${Math.round(feelsLikeTemperature)}º`;
-}
 
+  let humidity = document.querySelector("#humidity");
+  let humidityLevels = response.data.temperature.humidity;
+  humidity.innerHTML = `${humidityLevels}%`;
+
+  let wind = document.querySelector("#wind");
+  let windSpeed = response.data.wind.speed;
+  wind.innerHTML = `${windSpeed}km/h`;
+
+  let date = new Date(response.data.time * 1000);
+  let dateTime = document.querySelector("#date-and-time");
+  dateTime.innerHTML = formatDate(date);
+}
+function formatDate(date) {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  let month = months[date.getMonth()];
+  let dayMonth = date.getDate();
+
+  let day = days[date.getDay()];
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+
+  if (dayMonth === 1 || dayMonth === 21 || dayMonth === 31) {
+    return `${day} ${dayMonth}st <br/> ${month} ${hours}:${minutes}`;
+  }
+  if (dayMonth === 2 || dayMonth === 22) {
+    return `${day} ${dayMonth}nd <br/> ${month} ${hours}:${minutes}`;
+  }
+  if (dayMonth === 3 || dayMonth === 23) {
+    return `${day} ${dayMonth}rd <br/> ${month} ${hours}:${minutes}`;
+  } else {
+    return `${day} ${dayMonth}th <br/> ${month} ${hours}:${minutes}`;
+  }
+
+  //console.log(dayMonth);
+  //return `${day} ${dayMonth} <br/> ${month} ${hours}:${minutes}`;
+}
 function searchCity(city) {
   //let apiKey = "eb79bof31898546ffea432d4bb90t390";
   //Had to insert api key into the url instead because making a string for it kept showing 'Invalid api key'
