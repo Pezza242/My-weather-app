@@ -63,16 +63,20 @@ function formatDate(date) {
   let hours = date.getHours();
   let minutes = date.getMinutes();
 
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
   if (dayMonth === 1 || dayMonth === 21 || dayMonth === 31) {
-    return `${day} ${dayMonth}st <br/> ${month} ${hours}:${minutes}`;
+    return `${day} ${dayMonth}st ${month} ${hours}:${minutes}`;
   }
   if (dayMonth === 2 || dayMonth === 22) {
-    return `${day} ${dayMonth}nd <br/> ${month} ${hours}:${minutes}`;
+    return `${day} ${dayMonth}nd ${month} ${hours}:${minutes}`;
   }
   if (dayMonth === 3 || dayMonth === 23) {
-    return `${day} ${dayMonth}rd <br/> ${month} ${hours}:${minutes}`;
+    return `${day} ${dayMonth}rd ${month} ${hours}:${minutes}`;
   } else {
-    return `${day} ${dayMonth}th <br/> ${month} ${hours}:${minutes}`;
+    return `${day} ${dayMonth}th ${month} ${hours}:${minutes}`;
   }
 
   //console.log(dayMonth);
