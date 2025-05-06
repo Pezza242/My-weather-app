@@ -97,3 +97,5 @@ function citySearchBar(event) {
 
 let searchFormInput = document.querySelector("#search-form");
 searchFormInput = addEventListener("submit", citySearchBar);
+
+searchCity("Birmingham");
