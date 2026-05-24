@@ -20,8 +20,8 @@
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <header>
-      <form id="search-form">
+    <header class="container-fluid">
+      <form id="search-form" class="container-fluid">
         <input
           type="search"
           placeholder="Enter a city...."
@@ -31,7 +31,7 @@
         <input type="submit" value="search" id="search-button" />
       </form>
     </header>
-    <div class="city-container">
+    <div class="city-container container-fluid">
       <p id="date-and-time">Sunday 1st January 00:00</p>
       <div id="weather-icon">
         <img
@@ -40,9 +40,9 @@
       </div>
       <h1 id="current-city">Birmingham</h1>
     </div>
-    <div id="weather-box">
+    <div id="weather-box" class="container-md">
       <div class="current-info">
-        <div id="temperature-unit">
+        <div id="temperature-unit" class="pt-3">
           <h2 id="current-temperature">5</h2>
           <span class="unit">ºC</span>
         </div>

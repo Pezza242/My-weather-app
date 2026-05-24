@@ -29,6 +29,17 @@ header {
   margin: 0px 37%;
   padding: 10px 15px;
 }
+@media (max-width: 500px) {
+  #date-and-time {
+    margin: 0px 25%;
+  }
+  #search-bar {
+    max-width: 200px;
+  }
+  #weather-box {
+    max-width: 350px;
+  }
+}
 #search-bar {
   border: 8px solid white;
   padding: 5px;
@@ -61,10 +72,11 @@ header {
   margin-bottom: 15px;
 }
 #temperature-unit {
-  display: inline-flex;
+  display: flex;
   align-content: center;
   justify-content: center;
-  margin: 0px 45%;
+  position: relative;
+  left: 11px;
 }
 #current-temperature {
   font-weight: 300;
@@ -100,7 +112,7 @@ header {
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 10px;
-  max-width: 550px;
+  width: 550px;
   font-family: "Raleway", serif;
 }
 .current-info {
