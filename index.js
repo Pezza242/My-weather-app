@@ -30,6 +30,18 @@ function updateWeather(response) {
   let date = new Date(response.data.time * 1000);
   let dateTime = document.querySelector("#date-and-time");
   dateTime.innerHTML = formatDate(date);
+
+  let icon = response.data.condition.icon;
+  nightMode(icon);
+}
+function nightMode(icon) {
+  let body = document.querySelector("body");
+
+  if (icon.includes("night")) {
+    body.classList.add("dark");
+  } else {
+    body.classList.remove("dark");
+  }
 }
 function formatDate(date) {
   let days = [

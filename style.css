@@ -1,6 +1,16 @@
+:root {
+  --black: black;
+}
 body {
   margin: 0px;
-  background-image: url(https://i.ibb.co/HpX6rsYn/pexels-blue-sky.jpg);
+  background-image: url(./pictures/pexels\ blue\ sky.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+body.dark {
+  margin: 0px;
+  background-image: url(./pictures/pexel\ night\ sky.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -17,6 +27,14 @@ header {
   padding: 10px;
   background-attachment: fixed;
   margin-bottom: 25px;
+}
+.dark header {
+  background: #4a4848;
+  background: linear-gradient(
+    25deg,
+    rgba(74, 72, 72, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 
 #date-and-time {
@@ -55,9 +73,22 @@ header {
   border-radius: 5px;
   color: white;
 }
+.dark #search-button {
+  border: 10px solid var(--black);
+  background-color: var(--black);
+  margin: 10px;
+  padding: 4px 12px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+}
 #search-button:hover {
   border: 10px solid #086ac0;
   background-color: #086ac0;
+  transition: all 120ms ease-in-out;
+}
+.dark #search-button:hover {
+  border: 10px solid #2b064d;
+  background-color: #2b064d;
   transition: all 120ms ease-in-out;
 }
 .city-container {
@@ -128,6 +159,11 @@ strong {
   font-family: "Poppins", serif;
   font-weight: 600;
 }
+.dark strong {
+  color: #090337;
+  font-family: "Poppins", serif;
+  font-weight: 600;
+}
 footer {
   font-size: 12px;
   text-align: center;
@@ -141,4 +177,12 @@ a {
 a:hover {
   text-decoration: underline;
   color: #086ac0;
+}
+.dark a {
+  text-decoration: none;
+  color: #090337;
+}
+.dark a:hover {
+  text-decoration: underline;
+  color: #2b064d;
 }
